@@ -6,6 +6,10 @@
 @import "compass/reset";
 @import "base/reset";
 
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+
 @import "base/fonts";
 @import "mixins";
 @import "veriables";
