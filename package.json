@@ -1,0 +1,25 @@
+{
+  "name": "atisgulp",
+  "version": "1.0.0",
+  "description": "yoyo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxLutsenko/Atis_NPM_plus_GULP.git"
+  },
+  "author": "Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxLutsenko/Atis_NPM_plus_GULP/issues"
+  },
+  "homepage": "https://github.com/MaxLutsenko/Atis_NPM_plus_GULP#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.1.1",
+    "owl.carousel": "^2.2.0",
+    "slick-carousel": "^1.6.0"
+  }
+}
