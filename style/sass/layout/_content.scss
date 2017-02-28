@@ -1,0 +1,330 @@
+//FORM-SECTION
+.form {
+  padding: 50px;
+  background-color: $blue;
+  ul li {
+    padding: 0 ;
+  }
+  input {
+    border: none;
+    background-color: $blue;
+    border-bottom: 3px solid $label-border;
+    color: $white;
+    width: 100%;
+    height: 25px;
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type=date] {
+    color: transparent;
+    &:hover, &:focus {
+      color: $white;
+    }
+  }
+  .city-lbl {
+    font-family: $font-regular;
+    font-size: 16px;
+    color: $white;
+    margin-bottom: 10px;
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      background: url("../../images/city.png") center no-repeat;
+    }
+  }
+  .check-lbl {
+    @extend .city-lbl;
+    &:before {
+      @extend .city-lbl:before;
+      background: url("../../images/check-in.png") center no-repeat;
+    }
+  }
+  .rooms-lbl {
+    @extend .city-lbl;
+    &:before {
+      @extend .city-lbl:before;
+      background: url("../../images/rooms.png") center no-repeat;
+    }
+  }
+  .adults-lbl {
+    @extend .city-lbl;
+    &:before {
+      @extend .city-lbl:before;
+      background: url("../../images/adults.png") center no-repeat;
+    }
+  }
+  .children-lbl {
+    @extend .city-lbl;
+    &:before {
+      @extend .city-lbl:before;
+      background: url("../../images/children.png") center no-repeat;
+    }
+  }
+  .stars-lbl {
+    @extend .city-lbl;
+    &:before {
+      @extend .city-lbl:before;
+      background: url("../../images/stars.png") center no-repeat;
+    }
+  }
+  .btn-search {
+    @include transition(0.5s);
+    width: 47px;
+    height: 47px;
+    border: none;
+    border-radius: 50%;
+    background-color: $white;
+    outline: none;
+
+  }
+}
+//FORM-SECTION-END
+//PLACES-SECTION
+.places {
+  padding: 80px 0;
+}
+.places-list {
+
+  .relative {
+    position: relative;
+  }
+  .h3-styles {
+    position: absolute;
+    font-family: $font-regular;
+    font-size: 25px;
+    color: $white;
+    left: 30px;
+    bottom: 30px;
+  }
+  .hover-block {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(1,158,252, 0.7);
+  }
+
+  .hover {
+    @include transition(0.5s);
+    &:hover .hover-block {
+      display: block;
+
+    }
+  }
+
+  .crete {
+    div {
+      @extend .hover-block;
+    }
+  }
+
+}
+//PLACES-SECTION-END
+//HOTELS-SECTION
+.hotels {
+  background: $bg-gray;
+  padding: 80px 0;
+  .hotels-list {
+    .list-element {
+      width: 250px;
+      margin:0 auto 40px;
+      .img-block {
+        height: 180px;
+        background: $dark-grey;
+      }
+      .description {
+        background: $white;
+        padding: 10px 10px 0 10px;
+
+        div:first-child {
+          h3 {
+            font-family: $font-regular;
+            font-size: 18px;
+            color: $color-h;
+          }
+          span {
+            font-family: $font-regular;
+            font-size: 36px;
+            color: $color-h;
+          }
+        }
+        div:nth-child(2) {
+          p {
+            font-family: $font-regular;
+            opacity: 0.3;
+            color: $color-h;
+            font-size: 14px;
+          }
+        }
+
+        .stars li {
+          @include transition(0.5s);
+          width: 15px;
+          height: 15px;
+          margin-right: 5px;
+          background: url("../../images/star.png") center no-repeat;
+          &:hover {
+            transform: scale(1.3, 1.3);
+          }
+        }
+      }
+    }
+  }
+  .button {
+    @include transition(0.5s);
+    display: block;
+    position: relative;
+    bottom: -15px;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: none;
+    font-family: $font-regular;
+    font-size: 14px;
+    color: $blue;
+    font-weight: bold;
+    background: $white;
+    box-shadow: 0 0 65px rgba(163, 163, 163, 0.25);
+    &:hover {
+      box-shadow: 0 0 65px rgba(1, 125, 251, 0.25);
+      transform: scale(1.1, 1.1);
+    }
+  }
+  .btn-down {
+    background: transparent;
+    border: 1px soiid $bordergrey;
+    color: $bordergrey;
+  }
+}
+//HOTELS-SECTION-END
+//SLIDER-SECTION
+.slider-section {
+  padding: 15vmin 0;
+  background: url("../../images/bg-slider.png") center no-repeat;
+  background-size: cover;
+}
+.carousel-item {
+  padding: 0 15%;
+  h2{
+    font-family: $font-bold;
+    font-weight: bold;
+    color: $white;
+    font-size: 10vmin;
+    text-align: center;
+    margin-bottom: 7vmin;
+    line-height: 13vmin;
+    span {
+      font-family: $font-street;
+      color: $light-blue;
+    }
+  }
+
+  blockquote {
+    font-family: $font-light;
+    font-size: 3vmin;
+    line-height: 5vmin;
+    text-align: center;
+    color: $white;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    font-family: $font-regular;
+    font-size: 2.5vmin;
+    text-align: center;
+    color: $white;
+    margin-bottom: 2.5rem;
+    a {
+      color: $white;
+      &:hover {
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+.carousel-indicators li {
+  display: block;
+  max-width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: $white;
+}
+
+.carousel-indicators .active {
+  background: $light-blue;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 5vmin;
+  height: 10vmin;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../../images/right-arrow.png");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../../images/left-arrow.png");
+}
+//SLIDER-SECTION-END
+
+//POP-UP
+.wrapp-popup {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  .pop-up {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 55%;
+    padding: 15px;
+    background: url("../../images/Halkidiki.jpg") center no-repeat;
+    background-size: cover;
+    h2 {
+      font-family: $font-regular;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $blue;
+      text-align: center;
+      margin-top: 10%;
+      margin-bottom: 10px;
+    }
+    .cross {
+      border: none;
+      width: 20px;
+      height: 20px;
+      background: url("../../images/cross.png")center no-repeat;
+      background-size: cover;
+      float: right;
+    }
+  }
+}
+//POP-UP-END
+
+.h2-style {
+  font-family: $font-bold;
+  font-size: 16px;
+  text-align: center;
+  color: $color-h;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}

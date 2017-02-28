@@ -1,0 +1,45 @@
+@media (min-width: 995px) {
+  .nav-bar-hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 994px) {
+  header .menu-list {
+    display: none;
+  }
+
+  #button-menu {
+    display: block !important;
+  }
+
+  .form {
+    form {
+      display: flex;
+      justify-content: center;
+      button {
+        margin: 0 auto;
+      }
+    }
+    ul {
+      width: 90%;
+      flex-direction: column;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+  //.carousel-item h2 {
+  //  font-size: 50px;
+  //  line-height: 55px;
+  //}
+
+}
+
+@media (max-width: 768px)  {
+  body {
+    border: none;
+  }
+}
